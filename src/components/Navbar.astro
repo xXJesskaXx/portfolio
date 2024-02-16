@@ -5,7 +5,7 @@ import { Icon } from 'astro-icon/components';
 
 <nav>
     <div class="logo">
-      <p>Lorem, ipsum.</p>
+      <Icon name ="devicon:tortoisegit"/>
     </div>
     <ul class="nav-links">
       <li><a href="">About Me</a></li>
@@ -14,15 +14,31 @@ import { Icon } from 'astro-icon/components';
     </ul>
     <div class="theme-switch">
       <Icon name ="mdi:shield-moon-outline"/>
+      <Icon name ="mdi:shield-sun-outline"/>
     </div>
   </nav>
   
   <style>
+    [data-icon="mdi:shield-moon-outline"]{
+      display: none;
+    }
+    [data-icon] {
+      width: 50px;
+      height: auto;
+
+    }
+    [data-icon="devicon:tortoisegit"] {
+      width: 70px;
+      height: auto;
+      margin: -1rem 0;
+      
+    }
     nav {
       display: flex;
       flex-direction: row;
       color: #cfcfcf;
       justify-content: space-between;
+      max-height: 10vh;
     }
     nav ul {
       list-style-type: none;
