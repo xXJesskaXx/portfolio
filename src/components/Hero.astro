@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import me from "../assets/me.jpg";
+import me from "../assets/muruk.jpg";
 ---
 
 <section class="hero">
@@ -11,10 +11,10 @@ import me from "../assets/me.jpg";
             <p>Wir, die LUTZ + GRUB ACADEMY GmbH, befähigen zum adaptiven und lebenslangen Lernen, um individuell und kollektiv erfolgreich handeln zu können.</p>
             <p>Durch innovative und Kontext angepasste Lernmethoden erreichen Organisationen und Lernende Kompetenzen, um ihre beruflichen Ziele zu erreichen.</p>
             <p>Adaptive Growing® - be competent!</p>
+                <div class="hero-image">
+                    <Image src={me} alt="This is me." id={"me-image"} />
+                </div>
         </div>
-    </div>
-    <div class="hero-image">
-        <Image src={me} alt="This is me." />
     </div>
 </section>
     
@@ -37,9 +37,10 @@ import me from "../assets/me.jpg";
         max-width: 45ch;
     }
     .hero-image > #me-image {
-        object-fit: cover;
+        object-fit: cover;        
         height: 100%;
         overflow-x: hidden;
         width: 100%;
+       
     }
 </style>
